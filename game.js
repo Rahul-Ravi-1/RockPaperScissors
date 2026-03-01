@@ -64,4 +64,13 @@ function getHumanChoice() {
   }
 }
 
-playGame();
+const resultsDiv = document.querySelector('#results');
+const buttons = document.querySelectorAll('#buttons button')
+
+buttons.forEach((btn) => {
+  btn.addEventListener("click" , () => {
+    const playerSelection = btn.dataset.choice; // "Rock" / "Paper" / "Scissors"
+    resultsDiv.textContent = `You clicked: ${playerSelection}`;
+    console.log("playerSelection:", playerSelection); // keep for now
+  });
+});
