@@ -63,14 +63,17 @@ function getHumanChoice() {
     return "Invalid choice";
   }
 }
-
 const resultsDiv = document.querySelector('#results');
 const buttons = document.querySelectorAll('#buttons button')
 
 buttons.forEach((btn) => {
   btn.addEventListener("click" , () => {
     const playerSelection = btn.dataset.choice; // "Rock" / "Paper" / "Scissors"
+    const computerSelection = getComputerChoice();
     resultsDiv.textContent = `You clicked: ${playerSelection}`;
     console.log("playerSelection:", playerSelection); // keep for now
+
+    const result = playRound(playerSelection, computerSelection);
+    console.log(result);
   });
 });
