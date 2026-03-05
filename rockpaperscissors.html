@@ -5,19 +5,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="game.js" defer></script>
 </head>
 
 <body>
-    <script src="game.js" defer></script>
 
-    <h1> Rock Paper Scissors </h1>
-    <div id="buttons">
-        <button data-choice="Rock">Rock</button>
-        <button data-choice="Paper">Paper</button>
-        <button data-choice="Scissors">Scissors</button>
+    <h1 style="color: white;"> Rock Paper Scissors </h1>
+
+    <div class="game">
+        <div id="buttons">
+            <button data-choice="Rock">Rock</button>
+            <button data-choice="Paper">Paper</button>
+            <button data-choice="Scissors">Scissors</button>
+        </div>
+        <div class="score">
+            <h1>Player: <span id="playerScore">0</span></h1>
+            <h1>Computer: <span id="computerScore">0</span></h1>
+        </div>
+        <div id="results"></div>
     </div>
 
-    <div id="results"></div>
 </body>
 
 </html>
